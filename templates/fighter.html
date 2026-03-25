@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/static/style.css">
+
+<title>The Fighter</title>
+
+<script>
+
+function toggleVideo(id){
+
+let row=document.getElementById(id);
+
+row.classList.toggle("show");
+
+}
+
+</script>
+
+
+<style>
+
+/* fighter layout width */
+
+.page-wrapper{
+max-width:1000px;
+margin:auto;
+padding:40px 20px 40px 20px;
+}
+
+/* athlete metadata block */
+
+.fighter-meta{
+margin-top:20px;
+line-height:1.7;
+opacity:.9;
+}
+
+.meta-label{
+color:#e10600;
+font-weight:600;
+}
+
+/* video button icon */
+
+.video-btn{
+
+width:22px;
+height:22px;
+cursor:pointer;
+
+background:url("/static/video.svg") no-repeat center;
+background-size:contain;
+
+filter:brightness(0) invert(1);
+
+margin:auto;
+
+}
+
+/* fight table override */
+
+.fight-table th{
+border-bottom:1px solid #e10600;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<a href="/" class="home-btn"></a>
+
+
+<div class="page-wrapper">
+
+
+<div class="profile">
+
+<img src="/static/fighter.jpeg">
+
+<h1><strong>Pavan Gopal Virinchi Motupalli</strong></h1>
+
+
+
+</div>
+
+
+<div class="fighter-meta">
+
+<div><span class="meta-label">Height:</span> 178 cm</div>
+
+<div><span class="meta-label">Style:</span> Striking</div>
+
+<div><span class="meta-label">Stance:</span> Southpaw</div>
+
+<div><span class="meta-label">Gym(s):</span>
+Fit and Fight Club Nerul, Inferno Boxing Club Bangalore
+</div>
+
+<div><span class="meta-label">Weight Class(es):</span>
+Flyweight (125 lbs), Featherweight (145 lbs), Lightweight (155 lbs)
+</div>
+
+</div>
+
+
+
+
+
+
+
+<h2 class="red">Amateur K1 Record: 1-2-0</h2>
+
+
+<table class="fight-table">
+
+<tr>
+<th>Opponent</th>
+<th>Date</th>
+<th>Event</th>
+<th>Weight</th>
+<th>Result</th>
+<th>Method</th>
+<th></th>
+</tr>
+
+
+
+<tr>
+
+<td>Arjun Palanikumar</td>
+<td>March 29 2025</td>
+<td>Warrior's Dream Series Rising Stars 2</td>
+<td>145</td>
+<td>Win</td>
+<td>Decision</td>
+
+<td>
+<div class="video-btn"
+onclick="toggleVideo('k1a')">
+</div>
+</td>
+
+</tr>
+
+
+<tr id="k1a" class="video-row">
+
+<td colspan="7">
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/n665ykdrty4">
+</iframe>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>Swaroop Ramkar</td>
+<td>February 10 2024</td>
+<td>Warrior's Dream Series 7</td>
+<td>145</td>
+<td>Loss</td>
+<td>Decision</td>
+
+<td>
+<div class="video-btn"
+onclick="toggleVideo('k1b')">
+</div>
+</td>
+
+</tr>
+
+
+<tr id="k1b" class="video-row">
+
+<td colspan="7">
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/tOiOFhinifc">
+</iframe>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>Shivashankara GS</td>
+<td>October 27 2023</td>
+<td>Warrior's Dream Series 5</td>
+<td>155</td>
+<td>Loss</td>
+<td>KO/TKO (Kick to the ribs)</td>
+
+<td>
+<div class="video-btn"
+onclick="toggleVideo('k1c')">
+</div>
+</td>
+
+</tr>
+
+
+<tr id="k1c" class="video-row">
+
+<td colspan="7">
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/BTOUdC503Y0">
+</iframe>
+
+</td>
+
+</tr>
+
+
+</table>
+
+<h2 class="red">Amateur MMA Record: 0-1-0</h2>
+
+
+<table class="fight-table">
+
+<tr>
+<th>Opponent</th>
+<th>Date</th>
+<th>Event</th>
+<th>Weight</th>
+<th>Result</th>
+<th>Method</th>
+<th></th>
+</tr>
+
+
+<tr>
+
+<td>Keshav Pal</td>
+<td>September 1 2024</td>
+<td>Warrior's Dream Series 9</td>
+<td>125</td>
+<td>Loss</td>
+<td>KO/TKO (Ground and Pound)</td>
+
+<td>
+<div class="video-btn"
+onclick="toggleVideo('mma1')">
+</div>
+</td>
+
+</tr>
+
+
+<tr id="mma1" class="video-row">
+
+<td colspan="7">
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/rF7L9XDnsfo">
+</iframe>
+
+</td>
+
+</tr>
+
+</table>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/static/style.css">
+
+<title>Pavan Gopal Virinchi Motupalli</title>
+
+<style>
+
+/* split layout */
+
+.split-container{
+display:flex;
+height:100vh;
+position:relative;
+}
+
+/* panels */
+
+.panel{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:white;
+transition:.3s ease;
+position:relative;
+}
+
+.panel:hover{
+transform:scale(1.02);
+}
+
+/* background overlays */
+
+.engineer{
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+url("/static/engineer.jpeg");
+background-size:cover;
+background-position:center;
+}
+
+.fighter{
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+url("/static/fighter.jpeg");
+background-size:cover;
+background-position:center;
+}
+
+/* center identity */
+
+.identity{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+z-index:3;
+}
+
+.identity img{
+width:320px;
+border-radius:14px;
+box-shadow:0 20px 60px rgba(0,0,0,.8);
+}
+
+/* bold name */
+
+.identity h1{
+margin-top:14px;
+font-weight:700;
+font-size:28px;
+letter-spacing:.4px;
+}
+
+/* panel content */
+
+.panel-content{
+text-align:center;
+}
+
+/* titles */
+
+.label{
+font-size:46px;
+font-weight:600;
+margin-top:14px;
+}
+
+.sub{
+font-size:16px;
+opacity:.85;
+margin-top:6px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="split-container">
+
+<div class="identity">
+
+<img src="/static/landing.jpeg">
+
+<h1>Pavan Gopal Virinchi Motupalli</h1>
+
+</div>
+
+
+<a href="/engineer" class="panel engineer">
+
+<div class="panel-content">
+
+<div class="icon">
+<img src="/static/laptop.svg">
+</div>
+
+<div class="label">The Engineer</div>
+
+<div class="sub">
+AI • Physics • Mathematics
+</div>
+
+</div>
+
+</a>
+
+
+<a href="/fighter" class="panel fighter">
+
+<div class="panel-content">
+
+<div class="icon">
+<img src="/static/fist.svg">
+</div>
+
+<div class="label">The Fighter</div>
+
+<div class="sub">
+Kickboxing • MMA
+</div>
+
+</div>
+
+</a>
+
+</div>
+
+</body>
+</html>
