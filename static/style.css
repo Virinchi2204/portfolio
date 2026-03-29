@@ -176,3 +176,33 @@ display:none;
 .show{
 display:table-row;
 }
+
+/* MOBILE SUPPORT */
+
+@media(max-width:900px){
+
+.profile img{
+width:200px;
+height:200px;
+}
+
+.timeline{
+padding-left:20px;
+}
+
+.skill-block{
+margin-top:12px;
+}
+
+.label{
+font-size:30px;
+}
+
+.home-btn{
+top:14px;
+left:14px;
+width:32px;
+height:32px;
+}
+
+}
