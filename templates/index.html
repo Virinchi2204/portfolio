@@ -104,20 +104,20 @@ margin-top:6px;
 
 @media(max-width:900px){
 
-/* vertical split */
+/* vertical split layout */
 
 .split-container{
 flex-direction:column;
 height:100vh;
 }
 
-/* each panel exactly half screen */
+/* panels occupy equal halves */
 
 .panel{
 height:50vh;
 }
 
-/* portrait anchored exactly between panels */
+/* portrait anchored at split boundary */
 
 .identity{
 
@@ -133,7 +133,7 @@ z-index:5;
 
 }
 
-/* smaller portrait */
+/* square portrait with TOP crop */
 
 .identity img{
 
@@ -141,26 +141,35 @@ width:150px;
 height:150px;
 
 object-fit:cover;
+object-position:top;
 
-border-radius:14px;
+border-radius:12px;
 
-box-shadow:0 14px 40px rgba(0,0,0,.6);
+/* subtle border instead of padding frame */
 
-background:black;
-padding:6px;
+border:1px solid rgba(255,255,255,.18);
+
+box-shadow:0 8px 24px rgba(0,0,0,.55);
 
 }
 
+/* FORCE hide name on mobile */
 
-/* adjust label placement so portrait doesn't collide */
+.identity h1{
+
+display:none !important;
+
+}
+
+/* prevent overlap with panel text */
 
 .panel-content{
 
-transform:translateY(-18px);
+transform:translateY(-22px);
 
 }
 
-/* slightly reduce heading sizes */
+/* reduce label sizes */
 
 .label{
 
