@@ -104,56 +104,79 @@ margin-top:6px;
 
 @media(max-width:900px){
 
-/* SWITCH TO VERTICAL SPLIT */
+/* vertical split */
 
 .split-container{
 flex-direction:column;
+height:100vh;
 }
 
-/* TOP PANEL */
+/* each panel exactly half screen */
 
-.engineer{
+.panel{
 height:50vh;
 }
 
-/* BOTTOM PANEL */
-
-.fighter{
-height:50vh;
-}
-
-/* KEEP PORTRAIT CENTERED BETWEEN THEM */
+/* portrait anchored exactly between panels */
 
 .identity{
 
 position:absolute;
 
 top:50%;
+
 left:50%;
 
-transform:translate(-50%,-50%);
+transform:translate(-50%, -50%);
+
+z-index:5;
 
 }
 
-/* SMALLER MOBILE PORTRAIT */
+/* smaller portrait */
 
 .identity img{
-width:160px;
-box-shadow:0 10px 35px rgba(0,0,0,.7);
+
+width:150px;
+
+border-radius:12px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.6);
+
 }
 
-/* SMALLER TEXT */
+/* smaller name text */
 
 .identity h1{
-font-size:20px;
+
+font-size:18px;
+
+margin-top:8px;
+
 }
 
+/* adjust label placement so portrait doesn't collide */
+
+.panel-content{
+
+transform:translateY(-18px);
+
+}
+
+/* slightly reduce heading sizes */
+
 .label{
-font-size:32px;
+
+font-size:30px;
+
 }
 
 .sub{
-font-size:14px;
+
+font-size:13px;
+
+opacity:.9;
+
 }
 
 }
