@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html>
 <head>
 
@@ -152,6 +152,221 @@ Kickboxing • MMA
 </div>
 
 </a>
+
+</div>
+
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/assets/style.css">
+
+<title>Pavan Gopal Virinchi Motupalli</title>
+
+<style>
+
+/* DESKTOP LAYOUT */
+
+.split-container{
+display:flex;
+height:100vh;
+position:relative;
+}
+
+/* PANELS */
+
+.panel{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+color:white;
+transition:.3s ease;
+}
+
+.panel:hover{
+transform:scale(1.02);
+}
+
+/* BACKGROUND IMAGES */
+
+.engineer{
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+url("/assets/engineer.jpeg");
+background-size:cover;
+background-position:center;
+}
+
+.fighter{
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+url("/assets/fight2.jpeg");
+background-size:cover;
+background-position:center;
+}
+
+/* CENTER IMAGE (DESKTOP) */
+
+.identity{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+z-index:3;
+}
+
+.identity img{
+width:320px;
+border-radius:14px;
+box-shadow:0 20px 60px rgba(0,0,0,.8);
+}
+
+.identity h1{
+margin-top:14px;
+font-weight:700;
+font-size:28px;
+letter-spacing:.4px;
+}
+
+/* PANEL CONTENT */
+
+.panel-content{
+text-align:center;
+}
+
+.label{
+font-size:46px;
+font-weight:600;
+margin-top:14px;
+}
+
+.sub{
+font-size:16px;
+opacity:.85;
+margin-top:6px;
+}
+
+
+/* MOBILE VERSION */
+
+@media(max-width:900px){
+
+.split-container{
+flex-direction:column;
+height:100vh;
+}
+
+/* PANELS STACK FULL HEIGHT */
+
+.panel{
+height:50vh;
+}
+
+/* CENTER IMAGE SMALL + OVERLAYED */
+
+.identity{
+
+position:absolute;
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+z-index:5;
+}
+
+/* SMALLER CENTER IMAGE */
+
+.identity img{
+width:140px;
+border-radius:12px;
+}
+
+/* SMALLER NAME TEXT */
+
+.identity h1{
+font-size:18px;
+}
+
+/* SMALLER PANEL TEXT */
+
+.label{
+font-size:28px;
+}
+
+.sub{
+font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="split-container">
+
+<a href="engineer.html" class="panel engineer">
+
+<div class="panel-content">
+
+<div class="icon">
+<img src="/assets/laptop.svg">
+</div>
+
+<div class="label">The Engineer</div>
+
+<div class="sub">
+AI • Physics • Mathematics
+</div>
+<div class="sub">
+Click to see more
+</div>
+
+</div>
+
+</a>
+
+
+<a href="fighter.html" class="panel fighter">
+
+<div class="panel-content">
+
+<div class="icon">
+<img src="/assets/fist.svg">
+</div>
+
+<div class="label">The Fighter</div>
+
+<div class="sub">
+Kickboxing • MMA
+</div>
+<div class="sub">
+Click to see more
+</div>
+
+</div>
+
+</a>
+
+
+<div class="identity">
+
+<img src="/assets/landing.jpeg">
+
+<h1>Pavan Gopal Virinchi Motupalli</h1>
+
+</div>
 
 </div>
 
