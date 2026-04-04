@@ -10,7 +10,9 @@
 
 <style>
 
-/* DESKTOP SPLIT SCREEN */
+/* ========================= */
+/* SPLIT SCREEN CONTAINER */
+/* ========================= */
 
 .split-container{
 display:flex;
@@ -18,106 +20,259 @@ height:100vh;
 position:relative;
 }
 
+
+/* ========================= */
 /* PANELS */
+/* ========================= */
 
 .panel{
+
 flex:1;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 text-decoration:none;
+
 color:white;
+
 transition:.3s ease;
+
 position:relative;
+
+cursor:pointer;
+
 }
+
+
+/* cinematic hover */
 
 .panel:hover{
+
 transform:scale(1.02);
+
+box-shadow:inset 0 0 120px rgba(255,255,255,.08);
+
 }
 
-/* BACKGROUNDS */
 
-.engineer{
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
-url("/static/engineer.jpeg");
-background-size:cover;
-background-position:center;
-}
+/* clickable indicator */
 
-.fighter{
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
-url("/static/fight2.jpeg");
-background-size:cover;
-background-position:center;
-}
+.panel::after{
 
-/* CENTER PORTRAIT (DESKTOP) */
+content:"Click to Enter";
 
-.identity{
 position:absolute;
-top:50%;
+
+bottom:40px;
+
 left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-z-index:3;
+
+transform:translateX(-50%);
+
+font-size:14px;
+
+letter-spacing:1px;
+
+opacity:.65;
+
+transition:.25s ease;
+
 }
 
-.identity img{
-width:320px;
-border-radius:14px;
-box-shadow:0 20px 60px rgba(0,0,0,.8);
-}
 
-/* NAME */
+.panel:hover::after{
 
-.identity h1{
-margin-top:14px;
-font-weight:700;
-font-size:28px;
-letter-spacing:.4px;
-}
+opacity:1;
 
-/* PANEL TEXT */
+transform:translateX(-50%) translateY(-6px);
 
-.panel-content{
-text-align:center;
-}
-
-.label{
-font-size:46px;
-font-weight:600;
-margin-top:14px;
-}
-
-.sub{
-font-size:16px;
-opacity:.85;
-margin-top:6px;
 }
 
 
 /* ========================= */
-/* MOBILE LAYOUT OVERRIDE */
+/* PANEL BACKGROUNDS */
+/* ========================= */
+
+.engineer{
+
+background:
+
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+
+url("/static/engineer.jpeg");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+.fighter{
+
+background:
+
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+
+url("/static/fight2.jpeg");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+/* ========================= */
+/* CENTER PORTRAIT */
+/* ========================= */
+
+.identity{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+text-align:center;
+
+z-index:3;
+
+}
+
+
+.identity img{
+
+width:320px;
+
+border-radius:14px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.8);
+
+}
+
+
+/* name */
+
+.identity h1{
+
+margin-top:14px;
+
+font-weight:700;
+
+font-size:28px;
+
+letter-spacing:.4px;
+
+}
+
+
+/* ========================= */
+/* PANEL HEADER CONTENT */
+/* ========================= */
+
+.panel-content{
+
+position:absolute;
+
+top:60px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+text-align:center;
+
+}
+
+
+/* icons */
+
+.icon img{
+
+width:70px;
+
+}
+
+
+/* martial icon gold tint fix */
+
+.martial-icon{
+
+filter:
+
+invert(85%)
+
+sepia(35%)
+
+saturate(400%)
+
+hue-rotate(5deg)
+
+brightness(95%);
+
+}
+
+
+/* titles */
+
+.label{
+
+font-size:46px;
+
+font-weight:600;
+
+margin-top:14px;
+
+}
+
+
+/* subtitle */
+
+.sub{
+
+font-size:16px;
+
+opacity:.85;
+
+margin-top:6px;
+
+}
+
+
+
+/* ========================= */
+/* MOBILE LAYOUT */
 /* ========================= */
 
 @media(max-width:900px){
 
-/* vertical split layout */
-
 .split-container{
+
 flex-direction:column;
+
 height:100vh;
+
 }
 
-/* panels occupy equal halves */
+
+/* equal halves */
 
 .panel{
+
 height:50vh;
+
 }
 
-/* portrait anchored at split boundary */
+
+/* portrait divider center */
 
 .identity{
 
@@ -133,19 +288,20 @@ z-index:5;
 
 }
 
-/* square portrait with TOP crop */
+
+/* square portrait */
 
 .identity img{
 
 width:150px;
+
 height:150px;
 
 object-fit:cover;
+
 object-position:top;
 
 border-radius:12px;
-
-/* subtle border instead of padding frame */
 
 border:1px solid rgba(255,255,255,.18);
 
@@ -153,7 +309,8 @@ box-shadow:0 8px 24px rgba(0,0,0,.55);
 
 }
 
-/* FORCE hide name on mobile */
+
+/* hide name mobile */
 
 .identity h1{
 
@@ -161,15 +318,17 @@ display:none !important;
 
 }
 
-/* prevent overlap with panel text */
+
+/* panel header spacing */
 
 .panel-content{
 
-transform:translateY(-22px);
+top:40px;
 
 }
 
-/* reduce label sizes */
+
+/* mobile font sizes */
 
 .label{
 
@@ -177,11 +336,25 @@ font-size:30px;
 
 }
 
+
 .sub{
 
 font-size:13px;
 
 opacity:.9;
+
+}
+
+
+/* mobile click indicator */
+
+.panel::after{
+
+bottom:20px;
+
+font-size:12px;
+
+opacity:.75;
 
 }
 
@@ -195,6 +368,9 @@ opacity:.9;
 
 <div class="split-container">
 
+
+<!-- center portrait -->
+
 <div class="identity">
 
 <img src="/static/landing.jpeg">
@@ -204,44 +380,60 @@ opacity:.9;
 </div>
 
 
+
+<!-- engineer panel -->
+
 <a href="/engineer" class="panel engineer">
 
 <div class="panel-content">
 
 <div class="icon">
+
 <img src="/static/laptop.svg">
+
 </div>
 
 <div class="label">The Engineer</div>
 
 <div class="sub">
+
 AI • Physics • Mathematics
+
 </div>
 
 </div>
 
 </a>
 
+
+
+<!-- martial artist panel -->
 
 <a href="/fighter" class="panel fighter">
 
 <div class="panel-content">
 
 <div class="icon">
-<img src="/static/fist.svg">
+
+<img src="/static/fist.svg" class="martial-icon">
+
 </div>
 
-<div class="label">The Fighter</div>
+<div class="label">The Martial Artist</div>
 
 <div class="sub">
+
 Kickboxing • MMA
+
 </div>
 
 </div>
 
 </a>
 
+
 </div>
 
 </body>
+
 </html>

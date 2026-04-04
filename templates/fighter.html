@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" href="/static/style.css">
 
-<title>The Fighter</title>
+<title>The Martial Artist</title>
 
 <script>
 
@@ -23,68 +23,215 @@ row.classList.toggle("show");
 
 <style>
 
-/* fighter layout width */
+/* ===== BACKGROUND SYSTEM ===== */
+
+body{
+
+background:
+
+linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.95)),
+
+url("/static/desktopbg.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
+
+}
+
+
+/* ===== PAGE WIDTH ===== */
 
 .page-wrapper{
+
 max-width:1000px;
+
 margin:auto;
-padding:40px 20px 40px 20px;
+
+padding:40px 20px;
+
 }
 
-/* athlete metadata block */
+
+/* ===== GOLD COLOR SYSTEM ===== */
+
+:root{
+
+--gold-primary:#c8a94a;
+
+--gold-light:#e6c76b;
+
+--gold-deep:#8f7422;
+
+}
+
+
+/* ===== PROFILE IMAGE ===== */
+
+.profile img{
+
+width:260px;
+
+border-radius:18px;
+
+border:1px solid rgba(200,169,74,.35);
+
+box-shadow:
+
+0 0 25px rgba(200,169,74,.25),
+
+0 0 60px rgba(200,169,74,.12);
+
+transition:.35s ease;
+
+}
+
+
+/* glow animation */
+
+.profile img:hover{
+
+box-shadow:
+
+0 0 35px rgba(200,169,74,.45),
+
+0 0 90px rgba(200,169,74,.25);
+
+}
+
+
+/* ===== NAME ===== */
+
+.profile h1{
+
+color:var(--gold-light);
+
+}
+
+
+/* ===== METADATA ===== */
 
 .fighter-meta{
-margin-top:20px;
+
+margin-top:22px;
+
 line-height:1.7;
-opacity:.9;
+
+opacity:.95;
+
 }
+
 
 .meta-label{
-color:#e10600;
+
+color:var(--gold-primary);
+
 font-weight:600;
+
 }
 
-/* video button icon */
+
+/* ===== TABLE HEADERS ===== */
+
+.fight-table th{
+
+border-bottom:1px solid var(--gold-primary);
+
+color:var(--gold-light);
+
+}
+
+
+/* ===== VIDEO ICON ===== */
 
 .video-btn{
 
 width:22px;
+
 height:22px;
+
 cursor:pointer;
 
 background:url("/static/video.svg") no-repeat center;
+
 background-size:contain;
 
-filter:brightness(0) invert(1);
+filter:
+
+invert(80%)
+
+sepia(40%)
+
+saturate(400%)
+
+hue-rotate(5deg);
 
 margin:auto;
 
 }
 
-/* fight table override */
 
-.fight-table th{
-border-bottom:1px solid #e10600;
+/* ===== SECTION TITLES ===== */
+
+.red{
+
+color:var(--gold-light);
+
 }
 
-</style>
 
-<style>
+/* ===== MOBILE BACKGROUND SWITCH ===== */
 
 @media(max-width:900px){
 
-.page-wrapper{
-padding:25px 16px;
+body{
+
+background:
+
+linear-gradient(rgba(0,0,0,.88), rgba(0,0,0,.95)),
+
+url("/static/mobile bg.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:scroll;
+
 }
+
+
+.page-wrapper{
+
+padding:25px 16px;
+
+}
+
 
 .fight-table{
+
 display:block;
+
 overflow-x:auto;
+
 }
 
+
 iframe{
+
 width:100%;
+
 height:220px;
+
+}
+
+
+.profile img{
+
+width:200px;
+
 }
 
 }
@@ -107,8 +254,6 @@ height:220px;
 
 <h1><strong>Pavan Gopal Virinchi Motupalli</strong></h1>
 
-
-
 </div>
 
 
@@ -118,7 +263,7 @@ height:220px;
 
 <div><span class="meta-label">Style:</span> Striking</div>
 
-<div><span class="meta-label">Stance:</span> Southpaw</div>
+<div><span class="meta-label">Stance:</span> Southpaw (Switch)</div>
 
 <div><span class="meta-label">Gym(s):</span>
 Fit and Fight Club Nerul, Inferno Boxing Club Bangalore
@@ -129,10 +274,6 @@ Flyweight (125 lbs), Featherweight (145 lbs), Lightweight (155 lbs)
 </div>
 
 </div>
-
-
-
-
 
 
 
@@ -150,7 +291,6 @@ Flyweight (125 lbs), Featherweight (145 lbs), Lightweight (155 lbs)
 <th>Method</th>
 <th></th>
 </tr>
-
 
 
 <tr>
@@ -175,14 +315,13 @@ onclick="toggleVideo('k1a')">
 
 <td colspan="7">
 
-<iframe width="560" height="315"
+<iframe
 src="https://www.youtube.com/embed/n665ykdrty4">
 </iframe>
 
 </td>
 
 </tr>
-
 
 
 <tr>
@@ -207,14 +346,13 @@ onclick="toggleVideo('k1b')">
 
 <td colspan="7">
 
-<iframe width="560" height="315"
+<iframe
 src="https://www.youtube.com/embed/tOiOFhinifc">
 </iframe>
 
 </td>
 
 </tr>
-
 
 
 <tr>
@@ -239,7 +377,7 @@ onclick="toggleVideo('k1c')">
 
 <td colspan="7">
 
-<iframe width="560" height="315"
+<iframe
 src="https://www.youtube.com/embed/BTOUdC503Y0">
 </iframe>
 
@@ -247,8 +385,8 @@ src="https://www.youtube.com/embed/BTOUdC503Y0">
 
 </tr>
 
-
 </table>
+
 
 <h2 class="red">Amateur MMA Record: 0-1-0</h2>
 
@@ -288,7 +426,7 @@ onclick="toggleVideo('mma1')">
 
 <td colspan="7">
 
-<iframe width="560" height="315"
+<iframe
 src="https://www.youtube.com/embed/rF7L9XDnsfo">
 </iframe>
 
